@@ -21,6 +21,7 @@ class _CameraMasksFiltersState extends State<CameraMasksFilters> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
         body: Stack(
@@ -31,6 +32,11 @@ class _CameraMasksFiltersState extends State<CameraMasksFilters> {
                   "cbe7c663bdcc959da60980d79bf6bc9ebf992db0e958ce496f38e09859a6d03121321f07bc3d2410",
               onCameraReady: (isReady) {
                 platformVersion = "Camera status $isReady";
+                print(platformVersion);
+                setState(() {});
+              },
+              onImageCaptured: (path) {
+                platformVersion = "Images saved at $path";
                 print(platformVersion);
                 setState(() {});
               },
@@ -48,6 +54,27 @@ class _CameraMasksFiltersState extends State<CameraMasksFilters> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 28, right: 28),
+                      child: Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: IconButton(
+                            iconSize: 25,
+                            onPressed: () {
+                              if (_cameraDeepArController == null) {
+                                return;
+                              }
+                              _cameraDeepArController.snapPhoto();
+                            },
+                            icon: const Icon(
+                              Icons.camera_enhance,
+                              color: Colors.white54,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                     SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
