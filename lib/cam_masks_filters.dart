@@ -60,7 +60,8 @@ class _CameraMasksFiltersState extends State<CameraMasksFilters> {
                         child: Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: IconButton(
-                            iconSize: 25,
+                            splashColor: Colors.blueAccent,
+                            iconSize: 50,
                             onPressed: () {
                               if (_cameraDeepArController == null) {
                                 return;
@@ -69,7 +70,7 @@ class _CameraMasksFiltersState extends State<CameraMasksFilters> {
                             },
                             icon: const Icon(
                               Icons.camera_enhance,
-                              color: Colors.white54,
+                              color: Colors.white,
                             ),
                           ),
                         ),
