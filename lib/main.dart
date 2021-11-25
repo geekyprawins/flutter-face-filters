@@ -1,4 +1,4 @@
-import 'package:face_filters/splash.dart';
+import 'package:face_filters/ui/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {

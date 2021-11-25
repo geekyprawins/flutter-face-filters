@@ -1,4 +1,4 @@
-import 'package:face_filters/cam_masks_filters.dart';
+import 'package:face_filters/ui/cam_masks_filters.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
@@ -25,8 +25,8 @@ class _MySplashState extends State<MySplash> {
         ),
       ),
       backgroundColor: Colors.white,
-      seconds: 5,
-      navigateAfterSeconds: CameraMasksFilters(),
+      seconds: 3,
+      navigateAfterSeconds: const CameraMasksFilters(),
       title: const Text(
         "AR   Face   Filters",
         style: TextStyle(

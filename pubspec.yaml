@@ -38,6 +38,7 @@ dependencies:
   camera_deep_ar: ^0.0.1
   avatar_view: ^1.0.1
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -71,6 +72,7 @@ flutter:
      - images/
      - assets/android/
      - assets/ios/
+     - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
